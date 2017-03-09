@@ -1,7 +1,7 @@
 'use strict';
 
 var AlexaSkill = require('./AlexaSkill'),
-    recipes = require('./recipes');
+    information = require('./information');
 
 var APP_ID = undefined; //OPTIONAL: replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
 
@@ -22,7 +22,7 @@ MyMazda.prototype.eventHandlers.onLaunch = function (launchRequest, session, res
 };
 
 MyMazda.prototype.intentHandlers = {
-    "RecipeIntent": function (intent, session, response) {
+    "InformationIntent": function (intent, session, response) {
         var itemSlot = intent.slots.Item,
             itemName;
         if (itemSlot && itemSlot.value){
@@ -30,15 +30,15 @@ MyMazda.prototype.intentHandlers = {
         }
 
         var cardTitle = "Information about " + itemName,
-            recipe = recipes[itemName],
+            information = information[itemName],
             speechOutput,
             repromptOutput;
-        if (recipe) {
+        if (information) {
             speechOutput = {
-                speech: recipe,
+                speech: information,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, recipe);
+            response.tellWithCard(speechOutput, cardTitle, information);
         } else {
             var speech;
             if (itemName) {
