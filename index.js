@@ -30,15 +30,15 @@ MyMazda.prototype.intentHandlers = {
         }
 
         var cardTitle = "Information about " + itemName,
-            information = information[itemName],
+            info = information[itemName],
             speechOutput,
             repromptOutput;
-        if (information) {
+        if (info) {
             speechOutput = {
-                speech: information,
+                speech: info,
                 type: AlexaSkill.speechOutputType.PLAIN_TEXT
             };
-            response.tellWithCard(speechOutput, cardTitle, information);
+            response.tellWithCard(speechOutput, cardTitle, info);
         } else {
             var speech;
             if (itemName) {
