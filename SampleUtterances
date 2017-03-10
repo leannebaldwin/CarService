@@ -1,0 +1,10 @@
+InformationIntent what is the status of {Item}
+InformationIntent give me an update on {Item}
+InformationIntent what is my {Item}
+InformationIntent how is my {Item}
+InformationIntent status update for {Item}
+InformationIntent when is my {Item}
+InformationIntent give me information about {Item}
+InformationIntent give me info on {Item}
+InformationIntent where is my {Item}
+InformationIntent {Item}
