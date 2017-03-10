@@ -69,8 +69,8 @@ MyMazda.prototype.intentHandlers = {
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions such as, what's the information for, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the information for, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions such as, what's the information for service, car health, motorsport, or location, or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, what's the information for service, car health, motorsport, or location, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT
