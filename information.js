@@ -4,4 +4,4 @@ module.exports = {
     "motorsport": "Jason, it's Mazda motorsport weekend, why not visit us and demo the C X 9, say book now to reserve a slot.",
     "book now": "We have sent you an email",
     "location": "Jason's Mazda is currently parked at Jason's office"
-    };
+};
